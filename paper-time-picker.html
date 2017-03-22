@@ -92,14 +92,14 @@ If you include this element as part of `paper-dialog`, use the class
 
       /** Narrow *********************/
       :host([narrow]) #timePicker {
-        width: 235px;
+        width: 200px;
         height: 428px;
         @apply(--layout-vertical);
       }
       :host([narrow]) #heading {
         width: auto;
         height: 96px;
-        padding: 0 48px;
+        /*padding: 0 48px;*/
         @apply(--layout-horizontal);
         @apply(--layout-end-justified);
       }
@@ -109,10 +109,16 @@ If you include this element as part of `paper-dialog`, use the class
       :host([narrow]) #heading .time {
         margin-top: 6px;
         @apply(--paper-font-display3);
+        @media screen and (max-width: 599px) {
+          font-size: 30px;
+        }
       }
       :host([narrow]) #timePicker #heading .time {
         font-size: 60px;
         letter-spacing: .1ex !important;
+        @media screen and (max-width: 599px) {
+          font-size: 30px;
+        }
       }
       :host([narrow]) #heading .period {
         margin-left: 12px;
